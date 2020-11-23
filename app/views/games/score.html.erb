@@ -1,0 +1,13 @@
+
+<%if @status_dict == true && @status_scr == true%>
+  <h1><strong>Congratulations</strong></h1>
+  <h4> <%=@answer.upcase%> is indeed an english word!</h4>
+<% elsif @status_dict == true && @status_scr == false %>
+  <h1> Oh, no! </h1>
+  <h4> <%=@answer.upcase%> isn't on the available letters</h4>
+<% else %>
+  <h1> Oh, no! </h1>
+  <h4> <%=@answer.upcase%> isn't an english word</h4>
+<% end %>
+<br>
+<%= link_to "Play again", new_path %>
